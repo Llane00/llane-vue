@@ -28,7 +28,7 @@ export function track(target, key) {
   dep.add(activeEffect)
 }
 
-export function tragger(target, key) {
+export function trigger(target, key) {
   const dep = targetMap.get(target).get(key)
   for (const effect of dep) {
     effect.run()
